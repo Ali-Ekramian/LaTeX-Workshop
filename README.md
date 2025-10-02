@@ -40,8 +40,6 @@ Upload this repository as a `.zip` and compile directly in the browser using the
 
 ---
 
----
-
 ## 🛠 Topics Covered
 The following LaTeX topics were taught in the workshop (and are included in `main.tex`):
 
