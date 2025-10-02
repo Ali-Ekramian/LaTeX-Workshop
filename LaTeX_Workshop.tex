@@ -1,0 +1,296 @@
+\documentclass[12pt]{article}
+
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{physics}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=red,urlcolor=blue]{hyperref}
+
+\usepackage{subfiles}
+
+\usepackage[a4paper, top=3cm, bottom=3.5cm, left=3cm, right=3cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{\leftmark}
+\fancyhead[C]{LaTeX Workshop}
+\fancyhead[R]{\thepage}
+
+\fancyfoot[C]{Ali Ekramian}
+
+\title{\textbf{LaTeX Workshop}}
+\author{Ali Ekramian\\ \url{ali-ekramian.github.io}}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	\pagebreak
+	\tableofcontents
+	\pagebreak
+	
+	\section{Introduction}
+	This is the first time I'm using \LaTeX.
+	
+	\subsection{Why LaTeX?}
+	Because it's a professional typesetting system.
+	\subsection{File Types}
+	Example: .tex and .pdf
+	
+	\section{Basic Typesetting}
+	We want to start learning LaTeX.
+	\subsection{Writing Texts}
+	First sentence. Second sentence. \\ Third sentence.
+	
+	Forth sentence. \quad Fifth sentence \qquad six
+	\subsubsection{Paragraphs}
+	LaTeX was created in the early 1980s by Leslie Lamport when he was \linebreak working at Stanford Research Institute (SRI). He needed to write TeX macros for his own use and thought that with a little extra effort, he could make a general package usable by others. \\\\
+	 LaTeX was created in the early 1980s by Leslie Lamport when he was working at Stanford\footnote{This is a footnote} Research Institute\footnote{SRI}. He needed to write TeX macros for his own use and thought that with a little extra effort, he could make a general package usable by others.
+	% \part{title}
+	
+	\subsubsection{Text Formatting}
+	This \textbf{word} is \textbf{bold}. This \textit{word} is in italic.\\
+	\texttt{This is a code}\\
+	\textsl{Not Italic} \quad \underline{underline}
+	\subsubsection{Fonts}
+	{\large large word} \quad {\Large LARGE} \quad {\Huge Huge word}\\
+	{\tiny tiny word} \\
+	\textsf{Serif Fonts}
+	\subsubsection{Colours}
+	This \textcolor{purple}{word} is \textcolor{red}{Red}. To \colorbox{yellow}{highlight} we can use \colorbox{cyan}{this}.
+	\subsubsection{Characters}
+	how to type special characters like \% and \& and \$ not @ ! >
+	\subsection{Lists}
+	We have some environments:
+	\subsubsection{Itemize}
+	Itemize environments:
+	\begin{itemize}
+		\item First Item
+		\item Second Item
+		\item[!] Third Item
+		\item[] blanc
+	\end{itemize}
+	\subsubsection{Enumerate}
+	Enumerate environment:
+	\begin{enumerate}
+		\item First Item
+		\item Second Item
+		\item[5.] Third Item
+			\begin{enumerate}
+			\item First Item
+			\item Second Item
+				\begin{enumerate}
+					\item First Item
+					\item Second Item
+				\end{enumerate}
+			\end{enumerate}
+	\end{enumerate}
+	\subsubsection{Description}
+	\begin{description}
+		\item[First word] a long description 1
+		\item[Second word] a long description 2
+	\end{description}
+	
+	\section{Mathematics}
+	We can easily write math equations in \LaTeX.
+	\subsection{Inline}
+	we have $a^2+b=c\times c$ in math. We know that $\sqrt[3]{2} \in \mathbb{R} \, \text{text} \, x^2 $ is a number. math cal: $\mathcal{H}$
+	\begin{equation}
+		a_1 = \frac{v^2}{r}
+	\end{equation}
+	\begin{equation}
+		\begin{split}
+			A =& \pi r^2 \\
+			 =& \pi (a^2 + b^2)
+		\end{split}
+	\end{equation}
+	Functions:
+	\[  \sin \theta = \tan{(\alpha)} = \log{\Omega} = \omega\]
+	Accents:
+	\[ \ddot{\vec{r}} = \dot{\vec{v}} = a_x \hat{x} + a_y \hat{y} = v' = \tilde{a} \quad \forall i \in \mathcal{A} \]
+	\subsubsection{Align}
+	\begin{align}
+		f(y) &= \int f(x,y) \, dx \\
+		&= \int_1^2 xy \, dx  \\
+		&= y \left[ \frac{x^2}{2} \right]_1^2
+		\label{eq1}
+	\end{align}
+	this is an equation:
+	\[ \int_{-\infty}^{+\infty} e^{-x^2} \, dx = \sqrt{\pi}\]
+	sum and limits:
+	\[ e^x = \sum_{n=0}^\infty \frac{x^n}{n!} \qquad , \qquad \lim_{x\to 0^+} f(x)\]
+	diff eq:
+	\[ x'' + bx = 0 \qquad , \qquad \ddot{x} + \omega^2 x = 0\]
+	derivatives:
+	\[ \frac{df(x)}{dx} + u(x)\, \frac{d^2f(x)}{dx^2} = 0 \qquad, \qquad \frac{\partial^2 f(x,y)}{\partial x^2} = \frac{\partial^2 f(x,y)}{\partial y^2}\]
+	\subsection{Matrix}
+	usual math environment:
+	\[ \begin{pmatrix}
+		a & b & c \\ d & e & f
+	\end{pmatrix}^T \]
+	\subsection{Physics package}
+	matrix with this package:
+	\[ \mqty[a & b & c \\ d & e & f]^2 = \mqty(a & b & c \\ d & e & f)\]
+	\[ \det \mqty[a & b  \\ c & d] = \mqty|a & b  \\ c & d| = ad-bc\]
+	derivatives:
+	\[ \dv[2]{f(x)}{x} = \pdv[2]{f(x)}{x} \]
+	integral:
+	\[ \int f(x) \, \dd x \quad  \iint f(x,y) \, \dd x \, \dd y \quad \iiint f(x,y,z) \, \dd x \, \dd y \, \dd z \quad \oint_C g(q) \dd q\]
+	
+	\[
+	\ast \bigcap \phi \psi \quad \Delta x \quad \delta x
+	\]
+	\[
+	\rightarrow \quad \Rightarrow \qquad \text{EQ.1} \stackrel{x\neq y}{\Longrightarrow} \text{EQ.2} \qquad \exists i \in \mathcal{B}
+	\]
+	
+	\section{Figures}
+	How to input pictures
+	\subsection{Text Spacing}
+	\begin{flushright}
+		Right Word
+	\end{flushright}
+	\begin{center}
+		center word
+	\end{center}
+	\begin{flushleft}
+		Left word
+	\end{flushleft}
+	First \hfill Last \\
+		First \hfill Center \hfill Last \\
+	\begin{center}
+		\includegraphics[width=0.5\linewidth]{pic1.png}
+	\end{center}
+	\pagebreak
+	\subsection{Figure Environment}
+	LaTeX was created in the early 1980s by Leslie Lamport when he was working at Stanford Research Institute (SRI). He needed to write TeX macros for his own use and thought that with a little extra effort, he could make a general package usable by others.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{pic1.png}
+		\caption{LaTeX picture}
+		\label{fig1}
+	\end{figure}
+	LaTeX was created in the early 1980s by Leslie Lamport when he was working at Stanford Research Institute (SRI). He needed to write TeX macros for his own use and thought that with a little extra effort, he could make a general package usable by others.
+	\subsection{Multiple Images}
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.4\linewidth}
+			\includegraphics[width=\linewidth]{pic1.png}
+			\caption{LaTeX picture 1}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}{0.4\linewidth}
+			\includegraphics[width=0.8\linewidth]{pic1.png}
+			\caption{LaTeX picture 2}
+		\end{subfigure}
+	\end{figure}
+
+	\subsection{Image in Paragraphs}
+	\begin{wrapfigure}{r}{0.2\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{pic1.png}
+	\end{wrapfigure}
+		LaTeX was created in the early 1980s by Leslie Lamport when he was working at Stanford Research Institute (SRI). He needed to write TeX macros for his own use and thought that with a little extra effort, he could make a general package usable by others. 	LaTeX was created in the early 1980s by Leslie Lamport when he was working at Stanford Research Institute (SRI). He needed to write TeX macros for his own use and thought that with a little extra effort, he could make a general package usable by others.
+	\section{Referencing}
+	Package we use: \texttt{hyperref}
+	%\usepackage[colorlinks=ture,linkcolor=blue,citecolor=red,urlcolor=blue]{hyperref}
+	\subsection{Out Side}
+	My personal website is \href{https://ali-ekramian.github.io}{This Website}.\\
+	My Email is \href{mailto:ali.ekramian@yahoo.com}{This E-Mail}.\\
+	My personal website was \url{https://ali-ekramian.github.io}.\\
+	This is the image \href{run:pic1.png}{IMAGE}.\\
+	\subsection{Internal}
+	This was our image \ref{fig1}.\\
+	This was the equation No.\eqref{eq1}
+	\begin{equation}
+		A \vb{v} = \lambda \vb{v}
+		\label{law}
+		\tag{law}
+	\end{equation}
+	This is the \ref{law}.
+
+	\subsection{Articles \& Books}
+	The equations are shown in article \cite{article1} and the pictures were in article \cite{article2}.
+	
+	\section{Table }
+	Simple table: \hfill
+	\begin{tabular}{lcr}
+		Product & Cost & N \\
+		\hline
+		A & 20 & 100 \\
+		B & 15 & 150 \\
+		C & 12 & 600
+	\end{tabular}
+	\subsection{Table Environment}
+	Another table in Table Environment:
+	\begin{table}[h]
+		\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+			Product & Cost & N \\
+			\hline
+			A & 20 & 100 \\
+			B & 15 & 150 \\
+			C & 12 & 600 \\
+			\hline
+		\end{tabular}
+		\caption{Table Products and Costs}
+		\label{table1}
+	\end{table}
+	
+	\section{Multi File}
+	%\usepackage{subfiles}
+	\subfile{sub1.tex}
+	\subfile{sub1.tex}
+	
+	\rule{\linewidth}{1pt}
+	
+	\section{Geometry}
+	Do this:
+	\begin{verbatim}
+		\usepackage[a4paper, top=3cm, bottom=3.5cm, left=3cm, right=3cm]{geometry}
+	\end{verbatim}
+	
+	\section{Header \& Footer}
+		Do this:
+	\begin{verbatim}
+	\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\fancyhf{}
+	
+	\fancyhead[L]{\leftmark}
+	\fancyhead[C]{LaTeX Workshop}
+	\fancyhead[R]{\thepage}
+	
+	\fancyfoot[C]{Ali Ekramian}
+	\end{verbatim}
+
+	
+	
+	
+	
+	\pagebreak
+	\bibliographystyle{plain}
+	\bibliography{refrences}
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}
