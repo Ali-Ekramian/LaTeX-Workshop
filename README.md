@@ -30,7 +30,8 @@ This repository contains the LaTeX files that were taught in the workshop, along
 ### 2. Online:
 Upload this repository as a `.zip` and compile directly in the browser using these websites:
 - [Overleaf](https://www.overleaf.com)
-- [TeXready](https://www.texready.com)  
+- [TeXready](https://www.texready.com)
+- [Sharif LaTeX](https://latex.sharif.edu) *(for Sharif University students, login with Sharif ID)*
 
 ---
 
