@@ -2,8 +2,7 @@
 
 This repository contains the LaTeX files that were taught in the workshop, along with supporting materials.
 
-🎥 **Workshop Videos:**  
-[LaTeX Workshop](https://youtube.com/playlist?list=PLaLhDPCYgVNRI3i6cZZMcLzeP2iG9oDuZ&si=aMqHZbLKc7EEkbMD)
+🎥 **Workshop Videos:** [LaTeX Workshop](https://youtube.com/playlist?list=PLaLhDPCYgVNRI3i6cZZMcLzeP2iG9oDuZ&si=aMqHZbLKc7EEkbMD)
 
 
 ---
